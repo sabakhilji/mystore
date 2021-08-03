@@ -14,10 +14,15 @@ export class ProductListComponent implements OnInit {
   constructor(private http:HttpClient,private productsservice:ProductsService) { }
 
   ngOnInit(): void {
-    this.productsservice.getProducts().subscribe(products=>this.products=products)
+    this.productsservice.getProducts().subscribe(res=>{
+      
+      console.log(res)
+      this.products=res})
+    
   }
  showproductdetails(product:Product):void{
    this.products=this.products.filter(p=>p.id==product.id)
+  //this.productsservice.getProducts().subscribe(res=>this.p)
   
  }
 }

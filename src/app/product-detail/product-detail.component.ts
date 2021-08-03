@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ProductDetailComponent implements OnInit {
  @Input() product:Product;
- @Output() showproductdetails:EventEmitter<Product>=new EventEmitter;
+ @Output() showProductdetails:EventEmitter<Product>=new EventEmitter;
   constructor(private http:HttpClient,private productsservice:ProductsService) { 
     this.product={
       id:0,
@@ -25,7 +25,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   showdetails(product:Product):void{
-    this.showproductdetails.emit(product);
+    this.showProductdetails.emit(product);
 
 }
 }

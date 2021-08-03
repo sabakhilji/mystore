@@ -6,11 +6,12 @@ import { Product } from './products';
   providedIn: 'root'
 })
 export class ProductsService {
+  
   constructor(private http:HttpClient) { }
-  getProducts():Observable<Product[]>{
-    return this.http.get<Product[]>("http://localhost:3000/products");
+  getProducts():(Observable<Product[]>){
+    return this.http.get<Product[]>("/assets/db.json");
   }
   getProduct():Observable<Product[]>{
-    return this.http.get<Product[]>("http://localhost:3000/products/id")
+    return this.http.get<Product[]>("/assets/db.json/id")
   }
 }

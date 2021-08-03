@@ -1,5 +1,7 @@
 import { Component, OnInit ,Output,EventEmitter,Input} from '@angular/core';
 import { Product } from '../products';
+import { ProductsService } from '../products.service';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-product-show-detail',
   templateUrl: './product-show-detail.component.html',
@@ -7,22 +9,20 @@ import { Product } from '../products';
 })
 export class ProductShowDetailComponent implements OnInit {
   
-  @Input() product:Product;
-  @Output() showproductdetails:EventEmitter<Product>=new EventEmitter;
-  constructor() {
-    this.product={
-      id:0,
-      name:"toy",
-      price:20,
-      url:"",
-      description:"kids toy for 1 year old",
-    }
-   }
+  //@Input() product:Product;
+  //@Output() showproductdetails:EventEmitter<Product>=new EventEmitter;
+  constructor(private productsservice:ProductsService,private httpclient:HttpClient) {
+    
+      
+     
+    
+        }
 
   ngOnInit(): void {
+    
   }
-  showdetails(product:Product):void{
+  /*showdetails(product:Product):void{
     this.showproductdetails.emit(product);
   
-  }
+  }*/
 }
