@@ -14,7 +14,7 @@ const routes: Routes = [{
   path:'',component:ProductListComponent
 
 },
- {path:'productshowdetail',component:ProductShowDetailComponent
+ {path:'productshowdetail/:id',component:ProductShowDetailComponent
  }];
 
 @NgModule({

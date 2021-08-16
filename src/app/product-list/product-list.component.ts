@@ -9,7 +9,7 @@ import { ProductsService } from '../products.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  products:Product[]=[] 
+  products:Product[]=[]
   
   constructor(private http:HttpClient,private productsservice:ProductsService) { }
 
@@ -21,7 +21,7 @@ export class ProductListComponent implements OnInit {
     
   }
  showproductdetails(product:Product):void{
-   this.products=this.products.filter(p=>p.id==product.id)
+   this.products=this.products.filter (p=>p.id==product.id)
   //this.productsservice.getProducts().subscribe(res=>this.p)
   
  }

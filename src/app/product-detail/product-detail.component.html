@@ -5,9 +5,10 @@
 <br>
 {{product.description}}
 <br>
-<!--<app-product-show-detail [product]="product"></app-product-show-detail>
-<a routerLink="/productshowdetail" >-->
-<img width="100" alt="thumbnail" [src]="product.url">
+<!--<app-product-show-detail [product.id]="product_id"></app-product-show-detail>-->
+
+<a [routerLink]="['/productshowdetail/',product.id]">
+<img width="100" alt="thumbnail" [src]="product.url"></a>
 <button (click)="showdetails(product)">Show Details</button>
 <br>
 <br>

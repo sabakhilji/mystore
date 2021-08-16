@@ -1,1 +1,15 @@
 <!--<button (click)="showdetails(product)">Show Details</button>-->
+
+<div *ngIf="products!=undefined">
+    <div *ngFor="let product of products">
+<ul>
+    {{product.name}}
+    <br>
+    {{product.price}}
+    <br>
+    {{product.description}}
+    <br>
+    <button (click)="goBack()">Back</button>
+</ul>
+</div>
+</div>
